@@ -111,7 +111,7 @@ function pless() {
 }
 
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 source $HOME/.zsh_aliases
 test -r $HOME/.zsh_aliases_private && source $HOME/.zsh_aliases_private
