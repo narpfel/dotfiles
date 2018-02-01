@@ -8,7 +8,7 @@ Installation
 
 ```zsh
 git clone --bare git@github.com:narpfel/dotfiles.git $HOME/.dotfiles
-git --git-dir=$HOME/.dotfiles --work-tree=$HOME
+git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
 ```
 
 License
