@@ -34,6 +34,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'tpope/vim-surround'
+Plugin 'lambdalisue/suda.vim'
 
 call vundle#end()
 filetype plugin indent on
