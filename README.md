@@ -7,6 +7,8 @@ Installation
 ------------
 
 ```zsh
+git clone git@github.com:narpfel/oh-my-zsh.git $HOME/.oh-my-zsh
+git --git-dir=$HOME/.oh-my-zsh checkout local-changes
 git clone --bare git@github.com:narpfel/dotfiles.git $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
 ```
