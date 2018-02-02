@@ -34,7 +34,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'tpope/vim-surround'
-Plugin 'lambdalisue/suda.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -107,3 +106,5 @@ let g:python_highlight_all = 1
 " Show folder symbols (NERDTree & devicons) → This kills the nerdtree-git-plugin colour highlighting
 " let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 " let g:DevIconsEnableFoldersOpenClose = 1
+
+command Wsudo w !sudo tee % > /dev/null
