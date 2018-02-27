@@ -36,6 +36,8 @@ Plugin 'airblade/vim-gitgutter'
 
 Plugin 'tpope/vim-surround'
 
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -109,3 +111,5 @@ let g:python_highlight_all = 1
 " let g:DevIconsEnableFoldersOpenClose = 1
 
 command! Wsudo w !sudo tee % > /dev/null
+
+set autoread
