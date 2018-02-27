@@ -13,6 +13,7 @@ Plugin 'vim-airline/vim-airline'
 
 Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-python/python-syntax'
+Plugin 'adimit/prolog.vim'
 
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdtree'
