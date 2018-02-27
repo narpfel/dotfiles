@@ -108,4 +108,4 @@ let g:python_highlight_all = 1
 " let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 " let g:DevIconsEnableFoldersOpenClose = 1
 
-command Wsudo w !sudo tee % > /dev/null
+command! Wsudo w !sudo tee % > /dev/null
