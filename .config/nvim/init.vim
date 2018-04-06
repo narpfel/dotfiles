@@ -15,7 +15,6 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-python/python-syntax'
 Plugin 'adimit/prolog.vim'
 
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdtree'
 " Doesn’t really work with `vim-devicons`.
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -38,6 +37,8 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 
+" Always load last.
+Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
 filetype plugin indent on
 
