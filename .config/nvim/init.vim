@@ -23,11 +23,11 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/deoplete.nvim'
 
 Plugin 'neovimhaskell/haskell-vim'
-Plugin 'eagletmt/neco-ghc'
 
 Plugin 'sebastianmarkow/deoplete-rust'
 Plugin 'zchee/deoplete-clang'
 Plugin 'zchee/deoplete-jedi'
+Plugin 'autozimu/LanguageClient-neovim'
 
 Plugin 'ntpeters/vim-better-whitespace'
 
@@ -61,6 +61,10 @@ set expandtab
 " 4 charater indent
 set shiftwidth=4
 set softtabstop=4
+
+" Required for operations modifying multiple buffers like rename.
+" (LanguageClient)
+set hidden
 
 " Use powerline fonts in airline
 let g:airline_powerline_fonts = 1
@@ -110,6 +114,12 @@ let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
 
 let g:python_highlight_all = 1
 
+let g:LanguageClient_serverCommands = {
+    \ 'haskell': ['hie', '--lsp'],
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ }
+let g:LanguageClient_diagnosticsEnable = v:false
+
 " Show folder symbols (NERDTree & devicons) → This kills the nerdtree-git-plugin colour highlighting
 " let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 " let g:DevIconsEnableFoldersOpenClose = 1
@@ -117,3 +127,7 @@ let g:python_highlight_all = 1
 command! Wsudo w !sudo tee % > /dev/null
 
 set autoread
+
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
