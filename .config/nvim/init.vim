@@ -128,6 +128,18 @@ command! Wsudo w !sudo tee % > /dev/null
 
 set autoread
 
+inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr><Down> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-j>"
+inoremap <expr><Up> pumvisible() ? "\<C-p>" : "\<Up>"
+
+vnoremap > >gv
+vnoremap < <gv
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+" Go Back to last i position (e. g. after scrolling)
+nnoremap gb g;
+
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
