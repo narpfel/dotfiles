@@ -51,6 +51,9 @@ set termguicolors
 " Enable mouse support (scrolling etc.)
 set mouse=a
 
+" Line-wrap when using left/right arrow keys and h/l
+set whichwrap+=<,>,h,l,[,]
+
 " 4 character wide tab character
 set ts=4
 " expand tabs to spaces
@@ -88,7 +91,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 " Python by default has '# ' as delimiter, which leads to two spaces.
-let g:NERDCustomDelimiters = { 'python': { 'left': '#' } }
+let g:NERDCustomDelimiters = { 'python': { 'left': '#' }, 'haskell': { 'left': '--' } }
 
 " Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDDefaultAlign = 'left'
