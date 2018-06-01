@@ -1,0 +1,92 @@
+use_xft yes
+#on_bottom yes
+xftfont Linux Biolinum O:size=12
+xftalpha 0.8
+update_interval 0.5
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_argb_visual yes
+own_window_argb_value 255
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_borders no
+draw_graph_borders no
+stippled_borders 8
+border_width 1
+alignment top_right
+gap_x 30
+gap_y 34
+##gap_y 46
+use_spacer left
+draw_shades yes
+
+# colours
+color1 white
+# light blue
+color6 6892C6
+# orange
+color3 E77320
+# green
+color4 78BF39
+# red
+color5 FF0000
+#blue
+color2 009bf9
+
+TEXT
+${font Linux Biolinum O:style=bold:size=18}${color2}${alignc}${time %a %d. %b %k:%M:%S}$font$color
+#${alignc}${time %A %d. %B %Y} — ${time %H:%M:%S}
+#${alignc}$nodename on $sysname
+${alignc}$sysname $kernel on $machine
+$stippled_hr
+${color4}Prozesse:$color $processes           ${alignc}${color4}Aktive:$color $running_processes ${alignr}${color4}Up:$color $uptime
+$color$stippled_hr
+${color4}CPU0: $color$cpu% ${alignr 265}${color2}${cpubar cpu0}
+${color4}CPU1: $color${cpu cpu1}% ${alignr 265}${color2}${cpubar cpu1}
+${color4}CPU2: $color${cpu cpu2}% ${alignr 265}${color2}${cpubar cpu2}
+${color4}CPU3: $color${cpu cpu3}% ${alignr 265}${color2}${cpubar cpu3}
+${color4}CPU4: $color${cpu cpu4}% ${alignr 265}${color2}${cpubar cpu4}
+${color}Name                                CPU%       MEM%         PID ${font TeXGyreCursor:size=11}
+${color lightgrey}${top name 1} ${top cpu 1}  ${top mem 1}  ${top pid 1}
+${color lightgrey}${top name 2} ${top cpu 2}  ${top mem 2}  ${top pid 2}
+${color lightgrey}${top name 3} ${top cpu 3}  ${top mem 3}  ${top pid 3}$font$color
+${cpugraph cpu0 100,0 ffffff 009bf9}
+#${voffset -7}${cpugraph cpu1 20,0 ffffff 009bf9}
+#${voffset -7}${cpugraph cpu2 20,0 ffffff 009bf9}
+#${voffset -7}${cpugraph cpu3 20,0 ffffff 009bf9}
+#${voffset -7}${cpugraph cpu4 20,0 ffffff 009bf9}
+${voffset -4}${cpugraph cpu1 25,0 ffffff 009bf9}
+${voffset -4}${cpugraph cpu2 25,0 ffffff 009bf9}
+${voffset -4}${cpugraph cpu3 25,0 ffffff 009bf9}
+${voffset -4}${cpugraph cpu4 25,0 ffffff 009bf9}
+${color4}Temperatur:$color ${hwmon 0 temp 1} °C @ ${hwmon 0 fan 1} RPM
+${voffset -7}$stippled_hr
+${color4}RAM: $color$mem/$memmax – $memperc%
+${color2}${membar}
+${color4}Swap: $color$swap/$swapmax – $swapperc% ${color2}
+${swapbar}
+${color}Name                               MEM%         CPU%         PID ${font TeXGyreCursor:size=11}
+${color lightgrey}${top_mem name 1} ${top_mem mem 1}  ${top_mem cpu 1}  ${top_mem pid 1}
+${color lightgrey}${top_mem name 2} ${top_mem mem 2}  ${top_mem cpu 2}  ${top_mem pid 2}
+${color lightgrey}${top_mem name 3} ${top_mem mem 3}  ${top_mem cpu 3}  ${top_mem pid 3}$font
+#${color4}Prozesse (aktiv) : $color $processes ($running_processes)
+$color$stippled_hr
+${color4}IP Lokal: $color${addr eth0} ${goto 200}${color4}Global: $color${execi 7200 ~/.conky/publicip.sh}
+${color4}Heute Down: $color${totaldown eth0} ${goto 200}${color4}Up: $color${totalup eth0}
+${color4}Monat Down: $color${execi 300 LC_ALL=C vnstat -m | grep "$(LC_ALL=C date +"%b '%y")" | awk '{print $3 " " $4}'}\
+${goto 200}${color4}Up: $color${execi 300 LC_ALL=C vnstat -m | grep "$(LC_ALL=C date +"%b '%y")" | awk '{print $6 " " $7}'}
+${color4}Download:$color ${downspeed eth0} ${goto 200}${color4}Upload:$color ${upspeed eth0}
+# ${color4}Download:$color ${totaldown eth0} ${downspeed eth0} ${offset 50}${color4}   Upload:$color ${totalup eth0} ${upspeed eth0}
+${color #FFFFFF}${downspeedgraph eth0 32,150 ffffff 009bf9} ${offset 45}${color #FFFFFF}${upspeedgraph eth0 32,150 ffffff 009bf9}
+${voffset -7}$color$stippled_hr
+${color4}root: ${color #FFFFFF}${fs_free /}/${fs_size /} ${alignr 190}${color2}${fs_bar /}
+${color4}home: ${color #FFFFFF}${fs_free /home/}/${fs_size /home/} ${alignr 190}${color2}${fs_bar /home/}
+${color4}read: ${color}$diskio_read ${goto 200}${color4}write: ${color}$diskio_write
+${color #FFFFFF}${diskiograph_read 32,150 ffffff 009bf9} ${offset 45}${color #FFFFFF}${diskiograph_write 32,150 ffffff 009bf9}
+${voffset -7}$color$stippled_hr
+${color4}Updates: $color${execi 1800 pacman -Sup --print-format %n | wc -l} verfügbar
+${font}
+#
+
