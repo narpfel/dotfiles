@@ -22,8 +22,6 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'Shougo/deoplete.nvim'
 
-Plugin 'neovimhaskell/haskell-vim'
-
 Plugin 'sebastianmarkow/deoplete-rust'
 Plugin 'zchee/deoplete-clang'
 Plugin 'zchee/deoplete-jedi'
