@@ -115,7 +115,7 @@ let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
 let g:python_highlight_all = 1
 
 let g:LanguageClient_serverCommands = {
-    \ 'haskell': ['hie', '--lsp'],
+    \ 'haskell': ['hie-wrapper', '--lsp'],
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ }
 let g:LanguageClient_diagnosticsEnable = v:false
