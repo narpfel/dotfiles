@@ -7,8 +7,7 @@ Installation
 ------------
 
 ```zsh
-git clone git@github.com:narpfel/oh-my-zsh.git $HOME/.oh-my-zsh
-git --git-dir=$HOME/.oh-my-zsh checkout local-changes
+git clone git@github.com:robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 git clone --bare git@github.com:narpfel/dotfiles.git $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
 ```
@@ -34,5 +33,3 @@ The contents of this repository are licensed under the terms of version 3
 
 For the full text of the GPL, see
 [`.LICENSE`](https://github.com/narpfel/dotfiles/blob/master/.LICENSE).
-
-
