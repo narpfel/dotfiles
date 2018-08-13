@@ -66,6 +66,9 @@ set softtabstop=4
 " (LanguageClient)
 set hidden
 
+" Open preview panes on the bottom
+set splitbelow
+
 " Use powerline fonts in airline
 let g:airline_powerline_fonts = 1
 
