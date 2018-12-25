@@ -38,3 +38,5 @@ alias ö='l'
 compdef ö='ls'
 
 alias pt='PYTHONPATH=. py.test'
+
+alias atom='atom-beta'
