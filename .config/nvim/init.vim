@@ -38,6 +38,7 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/vim-easy-align'
 
 " Always load last.
 Plugin 'ryanoasis/vim-devicons'
