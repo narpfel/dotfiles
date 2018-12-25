@@ -37,6 +37,8 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'ctrlpvim/ctrlp.vim'
+
 " Always load last.
 Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
