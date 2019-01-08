@@ -82,8 +82,8 @@ ${color4}Download:$color ${downspeed eth0} ${goto 200}${color4}Upload:$color ${u
 # ${color4}Download:$color ${totaldown eth0} ${downspeed eth0} ${offset 50}${color4}   Upload:$color ${totalup eth0} ${upspeed eth0}
 ${color #FFFFFF}${downspeedgraph eth0 32,150 ffffff 009bf9} ${offset 45}${color #FFFFFF}${upspeedgraph eth0 32,150 ffffff 009bf9}
 ${voffset -7}$color$stippled_hr
-${color4}root: ${color #FFFFFF}${fs_free /}/${fs_size /} ${alignr 190}${color2}${fs_bar /}
-${color4}home: ${color #FFFFFF}${fs_free /home/}/${fs_size /home/} ${alignr 190}${color2}${fs_bar /home/}
+${color4}SSD: ${color #FFFFFF}${fs_free /}/${fs_size /} ${alignr 190}${color2}${fs_bar /}
+${color4}HDD: ${color #FFFFFF}${fs_free /media/hdd/}/${fs_size /media/hdd/} ${alignr 190}${color2}${fs_bar /media/hdd/}
 ${color4}read: ${color}$diskio_read ${goto 200}${color4}write: ${color}$diskio_write
 ${color #FFFFFF}${diskiograph_read 32,150 ffffff 009bf9} ${offset 45}${color #FFFFFF}${diskiograph_write 32,150 ffffff 009bf9}
 ${voffset -7}$color$stippled_hr
