@@ -74,6 +74,7 @@ ${color lightgrey}${top_mem name 3} ${top_mem mem 3}  ${top_mem cpu 3}  ${top_me
 #${color4}Prozesse (aktiv) : $color $processes ($running_processes)
 $color$stippled_hr
 ${color4}IP Lokal: $color${addr eth0} ${goto 200}${color4}Global: $color${execi 300 dig +short whoami.akamai.net @ns1-1.akamaitech.net}
+${color4}eth0 speed: $color${execi 60 cat /sys/class/net/eth0/speed} Mbit/s
 ${color4}Heute Down: $color${totaldown eth0} ${goto 200}${color4}Up: $color${totalup eth0}
 ${color4}Monat Down: $color${execi 300 LC_ALL=C vnstat -m | grep "$(LC_ALL=C date +"%b '%y")" | awk '{print $3 " " $4}'}\
 ${goto 200}${color4}Up: $color${execi 300 LC_ALL=C vnstat -m | grep "$(LC_ALL=C date +"%b '%y")" | awk '{print $6 " " $7}'}
