@@ -37,8 +37,8 @@ color2 009bf9
 
 TEXT
 ${font Linux Biolinum O:style=bold:size=18}${color2}${alignc}${time %a %d. %b %k:%M:%S}$font$color
-#${alignc}${time %A %d. %B %Y} — ${time %H:%M:%S}
-#${alignc}$nodename on $sysname
+# ${alignc}${time %A %d. %B %Y} — ${time %H:%M:%S}
+# ${alignc}$nodename on $sysname
 ${alignc}$sysname $kernel on $machine
 $stippled_hr
 ${color4}Prozesse:$color $processes           ${alignc}${color4}Aktive:$color $running_processes ${alignr}${color4}Up:$color $uptime
