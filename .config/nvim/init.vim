@@ -101,7 +101,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 " Python by default has '# ' as delimiter, which leads to two spaces.
-let g:NERDCustomDelimiters = { 'python': { 'left': '#' }, 'haskell': { 'left': '--' } }
+let g:NERDCustomDelimiters = {
+    \ 'python': { 'left': '#' },
+    \ 'haskell': { 'left': '--' },
+    \ 'fut':  { 'left': '--' },
+    \ }
 
 " Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDDefaultAlign = 'left'
