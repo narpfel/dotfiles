@@ -123,3 +123,9 @@ function tsm() {
     | tee -a ~/.speedtest.json \
     | jq '{"Down / (Mbit/s)": (.download / 1024 / 1024), "Up / (Mbit/s)": (.upload / 1024 / 1024), "Ping / ms": .ping}'
 }
+
+function source_cuda_paths() {
+    export CPATH=/opt/cuda/include
+    export LIBRARY_PATH=/opt/cuda/lib
+    export LD_LIBRARY_PATH=/opt/cuda/lib
+}
