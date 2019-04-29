@@ -38,6 +38,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'junegunn/vim-easy-align'
 
+Plugin 'tpope/vim-obsession'
+
 " Always load last.
 Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
