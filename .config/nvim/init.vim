@@ -84,6 +84,7 @@ let g:deoplete#enable_at_startup = 1
 set completeopt+=noinsert
 
 autocmd BufEnter * EnableStripWhitespaceOnSave
+let g:strip_whitespace_confirm = 0
 
 " Open NERDTree if not editing a git commit message
 :autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
