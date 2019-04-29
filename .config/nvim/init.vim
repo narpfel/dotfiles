@@ -132,10 +132,6 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_diagnosticsEnable = v:false
 let g:LanguageClient_loggingFile = '/tmp/language-client-log'
 
-" Show folder symbols (NERDTree & devicons) → This kills the nerdtree-git-plugin colour highlighting
-" let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-" let g:DevIconsEnableFoldersOpenClose = 1
-
 command! Wsudo w !sudo tee % > /dev/null
 
 set autoread
