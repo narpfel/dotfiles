@@ -21,12 +21,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/nerdcommenter'
 
-Plugin 'Shougo/deoplete.nvim'
-
-Plugin 'sebastianmarkow/deoplete-rust'
-Plugin 'zchee/deoplete-clang'
-Plugin 'zchee/deoplete-jedi'
 Plugin 'autozimu/LanguageClient-neovim'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'zchee/deoplete-jedi'
 
 Plugin 'ntpeters/vim-better-whitespace'
 
@@ -81,10 +78,6 @@ let g:deoplete#enable_at_startup = 1
 " automatically select first completion option on <Return>
 set completeopt+=noinsert
 
-let g:necoghc_use_stack = 0
-
-let g:necoghc_enable_detailed_browse = 1
-
 autocmd BufEnter * EnableStripWhitespaceOnSave
 
 " Open NERDTree if not editing a git commit message
@@ -114,18 +107,16 @@ nmap <C-e> <Leader>c<Space>
 vmap <C-e> <Leader>c<Space>gv
 imap <C-e> <ESC><Leader>c<Space>li
 
-let g:deoplete#sources#rust#racer_binary='/usr/bin/racer'
-
-let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
-
 let g:python_highlight_all = 1
 
 let g:LanguageClient_serverCommands = {
     \ 'haskell': ['hie-wrapper', '--lsp'],
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'cpp': ['clangd'],
+    \ 'c': ['clangd']
     \ }
 let g:LanguageClient_diagnosticsEnable = v:false
+let g:LanguageClient_loggingFile = '/tmp/language-client-log'
 
 " Show folder symbols (NERDTree & devicons) → This kills the nerdtree-git-plugin colour highlighting
 " let g:WebDevIconsUnicodeDecorateFolderNodes = 1
