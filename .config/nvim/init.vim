@@ -72,6 +72,9 @@ set hidden
 " Open preview panes on the bottom
 set splitbelow
 
+" Always show diagnostics sign column ( to prevent flickering/moving the text)
+set signcolumn=yes
+
 " Use powerline fonts in airline
 let g:airline_powerline_fonts = 1
 
