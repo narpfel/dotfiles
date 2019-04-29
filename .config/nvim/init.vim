@@ -155,3 +155,32 @@ nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 function! SyntaxItem()
   return synIDattr(synID(line("."),col("."),1),"name")
 endfunction
+
+" Move line with <C-Up> and <C-Down>
+nnoremap <C-Down> :m+<CR>==
+nnoremap <C-Up> :m-2<CR>==
+inoremap <C-Down> <Esc>:m+<CR>==gi
+inoremap <C-Up> <Esc>:m-2<CR>==gi
+vnoremap <C-Down> :m '>+1<CR>gv=gv
+vnoremap <C-Up> :m '<-2<CR>gv=gv
+
+" Also move line with <A-j> and <A-k>
+nnoremap <A-j> :m+<CR>==
+nnoremap <A-k> :m-2<CR>==
+inoremap <A-j> <Esc>:m+<CR>==gi
+inoremap <A-k> <Esc>:m-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Select by line with <S-Up> and <S-Down>
+nnoremap <S-Down> v<Down>
+nnoremap <S-Up> v<Up>
+inoremap <S-Down> <Esc>v<Down>
+inoremap <S-Up> <Esc>v<Up>
+vnoremap <S-Down> <Down>
+vnoremap <S-Up> <Up>
+
+" alacritty maps <C-Enter> to <F36> to close autocomplete popup menu with onee
+" key stroke
+nnoremap <F36> o
+inoremap <F36> <Esc>o
