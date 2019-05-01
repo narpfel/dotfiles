@@ -33,19 +33,14 @@ prompt_setup_pygmalion(){
 
   if [[ "$(whoami)" == "$DEFAULT_USERNAME" ]]
   then
-    username="me"
+    local username="me"
   else
-    username="%n"
+    local username="%n"
   fi
 
-  if [[ "$(hostname)" == "$DEFAULT_HOSTNAME" ]]
-  then
-    hostname="home"
-  else
-    hostname="%m"
-  fi
+  local hostname="%m"
 
-  base_prompt='%{$fg_bold[red]%}$username%{$reset_color%}%{$fg_bold[cyan]%}@%{$reset_color%}%{$fg_bold[green]%}$hostname%{$reset_color%}%{$fg[red]%}:%{$reset_color%}%{$fg[blue]%}%0~%{$reset_color%}'
+  base_prompt='%{$fg_bold[red]%}'"$username"'%{$reset_color%}%{$fg_bold[cyan]%}@%{$reset_color%}%{$fg_bold[green]%}'"$hostname"'%{$reset_color%}%{$fg[red]%}:%{$reset_color%}%{$fg[blue]%}%0~%{$reset_color%}'
   post_prompt='%{$fg_bold[blue]%}»%{$reset_color%} '
 
   base_prompt_nocolor=$(echo "$base_prompt" | perl -pe "s/%\{[^}]+\}//g")
