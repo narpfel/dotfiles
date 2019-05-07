@@ -78,8 +78,8 @@ source $ZSH/oh-my-zsh.sh
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
-export PATH="$PATH:/home/paul/bin"
-export PATH="$PATH:/home/paul/.local/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 if which nvim > /dev/null; then
     export EDITOR=nvim VISUAL=nvim
@@ -92,7 +92,7 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-export RUST_SRC_PATH="/home/paul/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+export RUST_SRC_PATH="$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 
 
 # pygmentize less
