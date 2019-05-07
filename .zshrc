@@ -100,14 +100,6 @@ export RUST_SRC_PATH="$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/
 export LESS=-R
 export LESSOPEN="| lesspipe.sh %s"
 export LESSCOLORIZER=pygmentize
-function pless() {
-    if [[ "$1" == "-e" ]]; then
-        encoding="$2"
-    else
-        encoding="utf-8"
-    fi
-    pygmentize -g -O encoding="$encoding" "$1" | less -R
-}
 
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
