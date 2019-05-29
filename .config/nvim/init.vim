@@ -20,6 +20,8 @@ Plugin 'scrooloose/nerdtree'
 " Doesn’t really work with `vim-devicons`.
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/nerdcommenter'
+" For the `gc` text object. Could maybe replace NERDCommenter‽
+Plugin 'tpope/vim-commentary'
 
 Plugin 'autozimu/LanguageClient-neovim'
 Plugin 'Shougo/deoplete.nvim'
