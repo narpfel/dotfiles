@@ -187,3 +187,6 @@ vnoremap <S-Up> <Up>
 " key stroke
 nnoremap <F36> o
 inoremap <F36> <Esc>o
+
+" Remove function call surrounding cursor.
+nmap dsf ds(dB
