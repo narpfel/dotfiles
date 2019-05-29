@@ -107,6 +107,7 @@ let g:NERDCustomDelimiters = {
     \ 'python': { 'left': '#' },
     \ 'haskell': { 'left': '--' },
     \ 'fut':  { 'left': '--' },
+    \ 'c': { 'left': '//' },
     \ }
 
 " Align line-wise comment delimiters flush left instead of following code indentation
