@@ -40,3 +40,5 @@ compdef ö='ls'
 alias pt='PYTHONPATH=. py.test'
 
 alias atom='atom-beta'
+
+alias view='nvim -R'
