@@ -77,6 +77,9 @@ set splitbelow
 " Always show diagnostics sign column ( to prevent flickering/moving the text)
 set signcolumn=yes
 
+set lazyredraw
+set inccommand=nosplit
+
 " Use powerline fonts in airline
 let g:airline_powerline_fonts = 1
 
@@ -84,6 +87,14 @@ let g:airline_powerline_fonts = 1
 let g:deoplete#enable_at_startup = 1
 " automatically select first completion option on <Return>
 set completeopt+=noinsert
+
+function g:Multiple_cursors_before()
+    call deoplete#custom#buffer_option('auto_complete', v:false)
+endfunction
+
+function g:Multiple_cursors_after()
+    call deoplete#custom#buffer_option('auto_complete', v:false)
+endfunction:
 
 autocmd BufEnter * EnableStripWhitespaceOnSave
 let g:strip_whitespace_confirm = 0
@@ -183,6 +194,9 @@ inoremap <S-Up> <Esc>v<Up>
 vnoremap <S-Down> <Down>
 vnoremap <S-Up> <Up>
 
+inoremap <A-Up> <Esc><Up>a
+inoremap <A-Down> <Esc><Down>a
+
 " alacritty maps <C-Enter> to <F36> to close autocomplete popup menu with onee
 " key stroke
 nnoremap <F36> o
@@ -190,3 +204,11 @@ inoremap <F36> <Esc>o
 
 " Remove function call surrounding cursor.
 nmap dsf ds(dB
+
+augroup AutoFoldHaskell
+    autocmd!
+
+    autocmd FileType haskell
+        \ set foldmethod=expr |
+        \ set foldexpr=getline(v:lnum)=~'^\\s*{\\?\\s*--'
+augroup END
