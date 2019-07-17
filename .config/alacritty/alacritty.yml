@@ -50,7 +50,7 @@ mouse_bindings:
 shell:
   program: /usr/bin/tmux
   args:
-    - -2
+    - "-2"
     - new-session
 
 key_bindings:
