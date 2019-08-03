@@ -146,7 +146,11 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_diagnosticsEnable = v:false
 let g:LanguageClient_loggingFile = '/tmp/language-client-log'
 
-command! Wsudo w !sudo tee % > /dev/null
+command! W w
+command! Qa qa
+command! Q q
+command! Wqa wqa
+command! Wq wq
 
 set autoread
 
