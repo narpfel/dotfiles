@@ -42,6 +42,9 @@ Plugin 'junegunn/vim-easy-align'
 
 Plugin 'tpope/vim-obsession'
 
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+
 " Always load last.
 Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
@@ -79,6 +82,8 @@ set signcolumn=yes
 
 set lazyredraw
 set inccommand=nosplit
+
+let mapleader = "\<Space>"
 
 " Use powerline fonts in airline
 let g:airline_powerline_fonts = 1
@@ -143,8 +148,18 @@ let g:LanguageClient_serverCommands = {
     \ 'cpp': ['clangd'],
     \ 'c': ['clangd']
     \ }
-let g:LanguageClient_diagnosticsEnable = v:false
+let g:LanguageClient_useVirtualText = v:false
 let g:LanguageClient_loggingFile = '/tmp/language-client-log'
+let g:LanguageClient_settingsPath = '~/.config/language-client/config.json'
+
+nnoremap <silent> <Leader>lp :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> <Leader>lh :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> <Leader>lg :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <Leader>lr :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
+nnoremap <silent> <Leader>lb :call LanguageClient#textDocument_references()<CR>
+nnoremap <silent> <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
+nnoremap <silent> <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
 
 command! W w
 command! Qa qa
@@ -166,9 +181,6 @@ vnoremap <S-Tab> <gv
 " Go Back to last i position (e. g. after scrolling)
 nnoremap gb g;
 
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
 function! SyntaxItem()
   return synIDattr(synID(line("."),col("."),1),"name")
