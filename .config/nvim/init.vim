@@ -53,6 +53,8 @@ filetype plugin indent on
 set number
 set colorcolumn=100
 
+set scrolloff=5
+
 colorscheme PygmentsDefault
 set termguicolors
 
