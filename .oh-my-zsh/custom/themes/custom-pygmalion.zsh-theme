@@ -55,6 +55,11 @@ prompt_pygmalion_precmd(){
   local gitinfo_nocolor=$(echo "$gitinfo" | perl -pe "s/%\{[^}]+\}//g")
   local exp_nocolor="$(print -P \"$base_prompt_nocolor$gitinfo_nocolor$post_prompt_nocolor\")"
   local prompt_length=${#exp_nocolor}
+  local venv_prompt="$(virtualenv_prompt_info)"
+
+  if [[ ! -z "$venv_prompt" ]]; then
+    venv_prompt="$venv_prompt "
+  fi
 
   local success
   if [[ $exit_state -eq 0 ]]; then
@@ -75,7 +80,7 @@ prompt_pygmalion_precmd(){
   fi
 
   PROMPT="$base_prompt$pipe$gitinfo $nl$post_prompt"
-  RPROMPT="$success"
+  RPROMPT="$venv_prompt$success"
 }
 
 prompt_setup_pygmalion

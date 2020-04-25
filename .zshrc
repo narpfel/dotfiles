@@ -69,6 +69,7 @@ plugins=(
     rust
     tmux
     sublime
+    virtualenv
     # zsh-syntax-highlighting
 )
 
