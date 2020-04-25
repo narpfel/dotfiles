@@ -70,6 +70,7 @@ plugins=(
     tmux
     sublime
     virtualenv
+    docker
     # zsh-syntax-highlighting
 )
 
