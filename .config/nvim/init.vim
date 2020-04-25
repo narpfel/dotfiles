@@ -48,6 +48,8 @@ Plugin 'tpope/vim-obsession'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
+Plugin 'KabbAmine/zeavim.vim'
+
 " Always load last.
 Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
@@ -246,3 +248,8 @@ tnoremap <silent> <C-j> <C-\><C-n>:TmuxNavigateDown<Cr>
 tnoremap <silent> <C-k> <C-\><C-n>:TmuxNavigateUp<Cr>
 tnoremap <silent> <C-l> <C-\><C-n>:TmuxNavigateRight<Cr>
 tnoremap <C-Esc> <C-\><C-n>
+
+nmap <leader>z <Plug>Zeavim
+vmap <leader>z <Plug>ZVVisSelection
+nmap gz <Plug>ZVOperator
+nmap <leader><leader>z <Plug>ZVKeyDocset
