@@ -17,6 +17,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-python/python-syntax'
 Plugin 'adimit/prolog.vim'
 Plugin 'BeneCollyridam/futhark-vim'
+Plugin 'hylang/vim-hy'
 
 Plugin 'scrooloose/nerdtree'
 " Doesn’t really work with `vim-devicons`.
