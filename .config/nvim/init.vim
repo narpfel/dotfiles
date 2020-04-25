@@ -106,20 +106,22 @@ function g:Multiple_cursors_after()
     call deoplete#custom#buffer_option('auto_complete', v:false)
 endfunction:
 
-autocmd BufEnter * EnableStripWhitespaceOnSave
-let g:strip_whitespace_confirm = 0
-
-" Open NERDTree if not editing a git commit message
-:autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
-
 " Bigger NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '→'
 let g:NERDTreeDirArrowCollapsible = '↓'
 
 let g:polyglot_disabled = ['python']
 
-" Close nvim iff NERDTree is the only window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup BufferEnter
+    autocmd!
+
+    " Close nvim iff NERDTree is the only window open
+    autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    autocmd BufEnter * EnableStripWhitespaceOnSave
+    autocmd BufEnter term://* startinsert
+augroup END
+
+let g:strip_whitespace_confirm = 0
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
