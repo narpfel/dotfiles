@@ -147,7 +147,7 @@ let g:NERDTreeMouseMode = 2
 
 nmap <C-e> <Leader>c<Space>
 vmap <C-e> <Leader>c<Space>gv
-imap <C-e> <ESC><Leader>c<Space>li
+imap <expr><C-e> pumvisible() ? "\<C-e>" : "\<Esc><Leader>c<Space>a"
 
 let g:python_highlight_all = 1
 
