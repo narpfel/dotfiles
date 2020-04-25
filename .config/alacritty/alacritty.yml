@@ -57,3 +57,9 @@ key_bindings:
   - key: Return
     mods: Control
     chars: "\x1b[24;5~"
+  - key: Up
+    mods: Control|Alt
+    chars: ""
+  - key: Down
+    mods: Control|Alt
+    chars: ""
