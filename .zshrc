@@ -84,6 +84,7 @@ export SAVEHIST=1000000
 
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 if which nvim > /dev/null; then
     export EDITOR=nvim VISUAL=nvim
