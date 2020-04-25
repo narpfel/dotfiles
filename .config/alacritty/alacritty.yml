@@ -56,7 +56,10 @@ shell:
 key_bindings:
   - key: Return
     mods: Control
-    chars: "\x1b[24;5~"
+    chars: "\x1b[24;5~"  # F36
+  - key: 39  # `ö` on QWERTZ
+    mods: Control
+    chars: "\x1b[23;5~"  # F35
   - key: Up
     mods: Control|Alt
     chars: ""

@@ -215,8 +215,8 @@ vnoremap <S-Up> <Up>
 inoremap <A-Up> <Esc><Up>a
 inoremap <A-Down> <Esc><Down>a
 
-" alacritty maps <C-Enter> to <F36> to close autocomplete popup menu with onee
-" key stroke
+" alacritty maps `<C-Enter>` to `<F36>` to close autocomplete popup menu with
+" one key stroke
 nnoremap <F36> o
 inoremap <F36> <Esc>o
 
@@ -230,3 +230,14 @@ augroup AutoFoldHaskell
         \ set foldmethod=expr |
         \ set foldexpr=getline(v:lnum)=~'^\\s*{\\?\\s*--'
 augroup END
+
+" `<C-ö>` is mapped to `<F35>` in Alacritty.
+nnoremap <silent> <F35> :TmuxNavigatePrevious<Cr>
+tnoremap <silent> <F35> <C-\><C-n>:TmuxNavigatePrevious<Cr>
+
+" tnoremap <silent> <Esc> <C-\><C-n>
+tnoremap <silent> <C-h> <C-\><C-n>:TmuxNavigateLeft<Cr>
+tnoremap <silent> <C-j> <C-\><C-n>:TmuxNavigateDown<Cr>
+tnoremap <silent> <C-k> <C-\><C-n>:TmuxNavigateUp<Cr>
+tnoremap <silent> <C-l> <C-\><C-n>:TmuxNavigateRight<Cr>
+tnoremap <C-Esc> <C-\><C-n>
