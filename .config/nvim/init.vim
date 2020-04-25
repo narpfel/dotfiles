@@ -3,6 +3,8 @@ filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 
+let g:python3_host_prog='/usr/bin/python'
+
 call vundle#begin('~/.config/nvim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
