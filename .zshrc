@@ -106,6 +106,7 @@ export LESS=-R
 export LESSOPEN="| lesspipe.sh %s"
 export LESSCOLORIZER=pygmentize
 
+export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
