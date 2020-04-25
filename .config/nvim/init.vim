@@ -157,7 +157,7 @@ let g:LanguageClient_serverCommands = {
     \ 'cpp': ['clangd'],
     \ 'c': ['clangd']
     \ }
-let g:LanguageClient_useVirtualText = v:false
+let g:LanguageClient_useVirtualText = 'No'
 let g:LanguageClient_loggingFile = '/tmp/language-client-log'
 let g:LanguageClient_settingsPath = '~/.config/language-client/config.json'
 
