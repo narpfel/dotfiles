@@ -105,7 +105,7 @@ function g:Multiple_cursors_before()
 endfunction
 
 function g:Multiple_cursors_after()
-    call deoplete#custom#buffer_option('auto_complete', v:false)
+    call deoplete#custom#buffer_option('auto_complete', v:true)
 endfunction:
 
 " Bigger NERDTree arrows
