@@ -127,6 +127,18 @@ function source_cuda_paths() {
     export LD_LIBRARY_PATH=/opt/cuda/lib
 }
 
+screencast() {
+    p() {
+        PROMPT="%0~ » "
+        RPROMPT=""
+    }
+    precmd_functions+=(p)
+}
+
+end_screencast() {
+    precmd_functions[$precmd_functions[(i)p]]=()
+}
+
 vv() {
     local venv="${1:-venv}"
     if [[ ! -e "$venv" ]]; then
