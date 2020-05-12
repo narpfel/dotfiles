@@ -126,3 +126,16 @@ function source_cuda_paths() {
     export LIBRARY_PATH=/opt/cuda/lib
     export LD_LIBRARY_PATH=/opt/cuda/lib
 }
+
+vv() {
+    local venv="${1:-venv}"
+    if [[ ! -e "$venv" ]]; then
+        echo "Create new virtualenv in \`$venv\`."
+        virtualenv "$venv"
+    elif [[ ! -d "$venv" || ! -f "$venv"/bin/activate ]]; then
+        echo "Could not activate venv in \`$venv\`."
+        return 1
+    fi
+    echo "Activating virtualenv in \`$venv\`."
+    . "$venv"/bin/activate
+}
