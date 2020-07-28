@@ -44,3 +44,4 @@ alias atom='atom-beta'
 alias view='nvim -R'
 
 alias e="exa -la --git --group-directories-first"
+alias diff="diff -u --color=auto"
