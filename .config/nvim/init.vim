@@ -160,6 +160,7 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_useVirtualText = 'No'
 let g:LanguageClient_loggingFile = '/tmp/language-client-log'
 let g:LanguageClient_settingsPath = '~/.config/language-client/config.json'
+let g:LanguageClient_selectionUI = 'fzf'
 
 nnoremap <silent> <Leader>lp :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> <Leader>lh :call LanguageClient#textDocument_hover()<CR>
