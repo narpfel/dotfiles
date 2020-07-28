@@ -1,59 +1,56 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-
 let g:python3_host_prog='/usr/bin/python'
 
-call vundle#begin('~/.config/nvim/bundle')
+call plug#begin('~/.config/nvim/bundle')
 
-Plugin 'VundleVim/Vundle.vim'
+Plug 'junegunn/vim-plug'
 
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 
-Plugin 'sheerun/vim-polyglot'
-Plugin 'vim-python/python-syntax'
-Plugin 'adimit/prolog.vim'
-Plugin 'BeneCollyridam/futhark-vim'
-Plugin 'hylang/vim-hy'
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-python/python-syntax'
+Plug 'adimit/prolog.vim'
+Plug 'BeneCollyridam/futhark-vim'
+Plug 'hylang/vim-hy'
 
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 " Doesn’t really work with `vim-devicons`.
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'scrooloose/nerdcommenter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdcommenter'
 " For the `gc` text object. Could maybe replace NERDCommenter‽
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
-Plugin 'autozimu/LanguageClient-neovim'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'deoplete-plugins/deoplete-jedi'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'dev' }
+Plug 'Shougo/deoplete.nvim'
+Plug 'deoplete-plugins/deoplete-jedi'
 
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
 
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
-Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'junegunn/vim-easy-align'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/vim-easy-align'
 
-Plugin 'tpope/vim-obsession'
+Plug 'tpope/vim-obsession'
 
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
-Plugin 'KabbAmine/zeavim.vim'
+Plug 'KabbAmine/zeavim.vim'
 
 " Always load last.
-Plugin 'ryanoasis/vim-devicons'
-call vundle#end()
-filetype plugin indent on
+Plug 'ryanoasis/vim-devicons'
+call plug#end()
 
 set number
 set colorcolumn=100
