@@ -153,7 +153,7 @@ let g:python_highlight_all = 1
 
 let g:LanguageClient_serverCommands = {
     \ 'haskell': ['hie-wrapper', '--lsp'],
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'rust': ['rust-analyzer'],
     \ 'cpp': ['clangd'],
     \ 'c': ['clangd']
     \ }
