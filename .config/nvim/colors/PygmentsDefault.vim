@@ -26,6 +26,7 @@ hi IncSearch ctermfg=231 ctermbg=124 cterm=NONE guifg=#eeeeee guibg=#ba2121 gui=
 hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi Directory ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Folded ctermfg=66 ctermbg=231 cterm=NONE guifg=#408080 guibg=#eeeeee gui=NONE
+hi SignColumn guibg=#d7d7d7
 
 hi Normal ctermfg=0 ctermbg=231 cterm=NONE guifg=#000000 guibg=#eeeeee gui=NONE
 hi Boolean ctermfg=28 ctermbg=231 cterm=bold guifg=#008000 guibg=#eeeeee gui=bold
