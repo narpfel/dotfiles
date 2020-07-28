@@ -28,7 +28,7 @@ Plugin 'tpope/vim-commentary'
 
 Plugin 'autozimu/LanguageClient-neovim'
 Plugin 'Shougo/deoplete.nvim'
-Plugin 'zchee/deoplete-jedi'
+Plugin 'deoplete-plugins/deoplete-jedi'
 
 Plugin 'ntpeters/vim-better-whitespace'
 
