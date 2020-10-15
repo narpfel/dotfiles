@@ -24,9 +24,11 @@ Plug 'scrooloose/nerdcommenter'
 " For the `gc` text object. Could maybe replace NERDCommenter‽
 Plug 'tpope/vim-commentary'
 
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'dev' }
-Plug 'Shougo/deoplete.nvim'
-Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile', 'for': 'json'}
+Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
+Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
+Plug 'voldikss/coc-cmake', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'ntpeters/vim-better-whitespace'
 
@@ -92,19 +94,6 @@ let mapleader = "\<Space>"
 " Use powerline fonts in airline
 let g:airline_powerline_fonts = 1
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-" automatically select first completion option on <Return>
-set completeopt+=noinsert
-
-function g:Multiple_cursors_before()
-    call deoplete#custom#buffer_option('auto_complete', v:false)
-endfunction
-
-function g:Multiple_cursors_after()
-    call deoplete#custom#buffer_option('auto_complete', v:true)
-endfunction:
-
 " Bigger NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '→'
 let g:NERDTreeDirArrowCollapsible = '↓'
@@ -148,25 +137,15 @@ imap <expr><C-e> pumvisible() ? "\<C-e>" : "\<Esc><Leader>c<Space>a"
 
 let g:python_highlight_all = 1
 
-let g:LanguageClient_serverCommands = {
-    \ 'haskell': ['hie-wrapper', '--lsp'],
-    \ 'rust': ['rust-analyzer'],
-    \ 'cpp': ['clangd'],
-    \ 'c': ['clangd']
-    \ }
-let g:LanguageClient_useVirtualText = 'No'
-let g:LanguageClient_loggingFile = '/tmp/language-client-log'
-let g:LanguageClient_settingsPath = '~/.config/language-client/config.json'
-let g:LanguageClient_selectionUI = 'fzf'
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
-nnoremap <silent> <Leader>lp :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> <Leader>lh :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> <Leader>lg :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <Leader>lr :call LanguageClient#textDocument_rename()<CR>
-nnoremap <silent> <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
-nnoremap <silent> <Leader>lb :call LanguageClient#textDocument_references()<CR>
-nnoremap <silent> <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
-nnoremap <silent> <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
+nmap <silent> <Leader>la <Plug>(coc-codeaction-line)
+nnoremap <silent><nowait> <Leader>lp :<C-u>CocList commands<cr>
+
+nmap <silent> <Leader>lr <Plug>(coc-rename)
 
 command! W w
 command! Qa qa
