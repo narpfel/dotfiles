@@ -94,9 +94,6 @@ else
     export EDITOR=nano VISUAL=nano
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
