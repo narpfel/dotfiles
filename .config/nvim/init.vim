@@ -50,8 +50,6 @@ Plug 'tpope/vim-obsession'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-Plug 'KabbAmine/zeavim.vim'
-
 " Always load last.
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -226,10 +224,6 @@ tnoremap <silent> <C-k> <C-\><C-n>:TmuxNavigateUp<Cr>
 tnoremap <silent> <C-l> <C-\><C-n>:TmuxNavigateRight<Cr>
 tnoremap <C-Esc> <C-\><C-n>
 
-nmap <leader>z <Plug>Zeavim
-vmap <leader>z <Plug>ZVVisSelection
-nmap gz <Plug>ZVOperator
-nmap <leader><leader>z <Plug>ZVKeyDocset
 
 abbr vecotr vector
 abbr inlcude include
