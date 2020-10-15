@@ -97,9 +97,6 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-export RUST_SRC_PATH="$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
-
-
 # pygmentize less
 # Doesn't work with unicode/UTF-8 files!
 export LESS=-R
