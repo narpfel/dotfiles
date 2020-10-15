@@ -3,6 +3,8 @@ filetype off
 
 let g:python3_host_prog='/usr/bin/python'
 
+let g:polyglot_disabled = ['python']
+
 call plug#begin('~/.config/nvim/bundle')
 
 Plug 'junegunn/vim-plug'
@@ -97,8 +99,6 @@ let g:airline_powerline_fonts = 1
 " Bigger NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '→'
 let g:NERDTreeDirArrowCollapsible = '↓'
-
-let g:polyglot_disabled = ['python']
 
 augroup BufferEnter
     autocmd!
