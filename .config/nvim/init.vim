@@ -226,11 +226,12 @@ tnoremap <silent> <C-k> <C-\><C-n>:TmuxNavigateUp<Cr>
 tnoremap <silent> <C-l> <C-\><C-n>:TmuxNavigateRight<Cr>
 tnoremap <C-Esc> <C-\><C-n>
 
-
-abbr vecotr vector
+abbr cosnt const
+abbr improt import
 abbr inlcude include
-abbr tempalte template
-abbr typeanme typename
+abbr mian main
 abbr String_view string_view
 abbr string_View string_view
-abbr cosnt const
+abbr tempalte template
+abbr typeanme typename
+abbr vecotr vector
