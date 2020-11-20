@@ -135,6 +135,8 @@ imap <expr><C-e> pumvisible() ? "\<C-e>" : "\<Esc><Leader>c<Space>a"
 
 let g:python_highlight_all = 1
 
+let g:ctrlp_user_command = 'fd --hidden --exclude ".git/" --type f --full-path %s'
+
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
