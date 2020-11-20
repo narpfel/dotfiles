@@ -10,7 +10,7 @@ Installation
 git clone git@github.com:robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 git clone --bare git@github.com:narpfel/dotfiles.git $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
-git clone https://github.com/VundleVim/Vundle.vim.git .config/nvim/bundle/Vundle.vim
+git clone git@github.com:junegunn/vim-plug $HOME/.config/nvim/bundle/vim-plug
 # logout and then login again to load new config
 config config --local status.showUntrackedFiles no
 ```
