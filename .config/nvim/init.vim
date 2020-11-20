@@ -31,6 +31,7 @@ Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile', 'for': 'json'
 Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
 Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
 Plug 'voldikss/coc-cmake', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'ntpeters/vim-better-whitespace'
 
