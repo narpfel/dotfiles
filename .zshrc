@@ -127,15 +127,24 @@ end_screencast() {
     precmd_functions[$precmd_functions[(i)p]]=()
 }
 
-vv() {
+_build_virtualenv() {
+    local virtualenv_command="$1"; shift
     local venv="${1:-venv}"
     if [[ ! -e "$venv" ]]; then
         echo "Create new virtualenv in \`$venv\`."
-        virtualenv "$venv"
+        ${(Q)${(z)virtualenv_command}} "$venv" || return 1
     elif [[ ! -d "$venv" || ! -f "$venv"/bin/activate ]]; then
         echo "Could not activate venv in \`$venv\`."
         return 1
     fi
     echo "Activating virtualenv in \`$venv\`."
     . "$venv"/bin/activate
+}
+
+vv() {
+    _build_virtualenv virtualenv "$@"
+}
+
+vt() {
+    _build_virtualenv "tox --devenv" "$@"
 }
