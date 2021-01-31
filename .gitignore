@@ -1,4 +1,4 @@
-.dotfiles/
-.zsh_aliases_private
-.gitconfig_user
 .config/nvim/bundle
+.dotfiles/
+.gitconfig_user
+.zsh_aliases_private

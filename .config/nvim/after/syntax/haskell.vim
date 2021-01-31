@@ -9,4 +9,3 @@ hi link haskellCompose Conceal
 hi link Conceal Operator
 set concealcursor=nvi
 set conceallevel=2
-
