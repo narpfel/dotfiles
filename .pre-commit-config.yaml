@@ -6,6 +6,8 @@ repos:
       - id: check-json
       - id: check-merge-conflict
       - id: check-symlinks
+        # intentionally ignored as it symlinks into a submodule
+        exclude: ^\.config/nvim/autoload/plug\.vim$
       - id: check-toml
       - id: check-yaml
       - id: destroyed-symlinks
