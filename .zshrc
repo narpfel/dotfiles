@@ -129,10 +129,10 @@ end_screencast() {
 
 _build_virtualenv() {
     local virtualenv_command="$1"; shift
-    local venv="${1:-venv}"
+    local venv="${1:-venv}"; shift
     if [[ ! -e "$venv" ]]; then
         echo "Create new virtualenv in \`$venv\`."
-        ${(Q)${(z)virtualenv_command}} "$venv" || return 1
+        ${(Q)${(z)virtualenv_command}} "$venv" "$@" || return 1
     elif [[ ! -d "$venv" || ! -f "$venv"/bin/activate ]]; then
         echo "Could not activate venv in \`$venv\`."
         return 1
