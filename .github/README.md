@@ -7,13 +7,22 @@ Installation
 ------------
 
 ```zsh
-git clone git@github.com:robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
-git clone --bare git@github.com:narpfel/dotfiles.git $HOME/.dotfiles
+git clone git@github.com:ohmyzsh/ohmyzsh $HOME/.oh-my-zsh
+git clone --bare git@github.com:narpfel/dotfiles $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
-git clone git@github.com:junegunn/vim-plug $HOME/.config/nvim/bundle/vim-plug
 # logout and then login again to load new config
+config submodule init && config submodule update
 config config --local status.showUntrackedFiles no
 ```
+
+### Depenencies
+* `git`
+* `tmux`
+* `neovim`
+* [`grml-zsh-config`](https://archlinux.org/packages/extra/any/grml-zsh-config/)
+* [`autojump`](https://aur.archlinux.org/packages/autojump/)
+* `nodejs`
+* `yarn`
 
 License
 -------
