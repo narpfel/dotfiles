@@ -90,6 +90,8 @@ set signcolumn=yes
 set lazyredraw
 set inccommand=nosplit
 
+set cursorline
+
 let mapleader = "\<Space>"
 
 " Use powerline fonts in airline
