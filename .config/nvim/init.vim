@@ -19,9 +19,6 @@ Plug 'adimit/prolog.vim'
 Plug 'BeneCollyridam/futhark-vim'
 Plug 'hylang/vim-hy'
 
-Plug 'scrooloose/nerdtree'
-" Doesn’t really work with `vim-devicons`.
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 " For the `gc` text object. Could maybe replace NERDCommenter‽
 Plug 'tpope/vim-commentary'
@@ -95,15 +92,9 @@ let mapleader = "\<Space>"
 " Use powerline fonts in airline
 let g:airline_powerline_fonts = 1
 
-" Bigger NERDTree arrows
-let g:NERDTreeDirArrowExpandable = '→'
-let g:NERDTreeDirArrowCollapsible = '↓'
-
 augroup BufferEnter
     autocmd!
 
-    " Close nvim iff NERDTree is the only window open
-    autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     autocmd BufEnter * EnableStripWhitespaceOnSave
     autocmd BufEnter term://* startinsert
 augroup END
@@ -125,10 +116,6 @@ let g:NERDDefaultAlign = 'left'
 
 " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
-
-let g:NERDTreeGitStatusShowIgnored = 1
-
-let g:NERDTreeMouseMode = 2
 
 nmap <C-e> <Leader>c<Space>
 vmap <C-e> <Leader>c<Space>gv
