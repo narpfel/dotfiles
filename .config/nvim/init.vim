@@ -30,6 +30,9 @@ Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
 Plug 'voldikss/coc-cmake', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
 Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'airblade/vim-gitgutter'
@@ -213,6 +216,20 @@ tnoremap <silent> <C-j> <C-\><C-n>:TmuxNavigateDown<Cr>
 tnoremap <silent> <C-k> <C-\><C-n>:TmuxNavigateUp<Cr>
 tnoremap <silent> <C-l> <C-\><C-n>:TmuxNavigateRight<Cr>
 tnoremap <C-Esc> <C-\><C-n>
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+  playground = {
+    enable = true,
+    disable = {},
+    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+    persist_queries = false -- Whether the query persists across vim sessions
+  },
+}
+EOF
 
 abbr cosnt const
 abbr improt import
