@@ -1,2 +1,7 @@
 Session.vim
+cachegrind.out.*
+callgrind.out.*
+compile_commands.json
 compile_flags.txt
+perf.data
+perf.data.out
