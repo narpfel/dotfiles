@@ -37,3 +37,39 @@ alias e="exa -la --git --group-directories-first"
 alias diff="diff -u --color=auto"
 
 alias dotfiles="GIT_DIR=\"$HOME/.dotfiles\" GIT_WORK_TREE=\"$HOME\""
+
+find-cargo-dirs() {
+    local dir
+    locate -0 Cargo.toml \
+        | grep --null-data -v .cargo/registry \
+        | xargs -0 -L 1 --no-run-if-empty \
+            dirname --zero \
+        | while read -d $'\0' dir; do; \
+            test -d "$dir/target" \
+                && echo -ne "$dir/target\0"; \
+        done
+}
+
+find-cargo-dirs-size() {
+    find-cargo-dirs \
+        | xargs -0 --no-run-if-empty \
+            du --null --human-readable --summarize --total \
+        | sort --zero-terminated --human-numeric-sort \
+        | xargs -0 -L 1 --no-run-if-empty \
+            echo
+}
+
+find-cargo-dirs-remove() {
+    local perform_destructive_operation
+    if [ "$1" != "--perform-destructive-operation" ]; then
+        echo "performing dry run, use --perform-destructive-operation" >&2
+        perform_destructive_operation=""
+    else
+        shift
+        perform_destructive_operation="--perform-destructive-operation"
+    fi
+
+    find-cargo-dirs \
+        | xargs -0 -L 1 --no-run-if-empty \
+            find-cargo-dirs-cd-clean $perform_destructive_operation
+}

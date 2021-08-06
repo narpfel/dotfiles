@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+
+if [ "$1" != "--perform-destructive-operation" ]; then
+    echo "performing dry run, use --perform-destructive-operation" >&2
+    echo_if_dry_run=echo
+else
+    shift
+    echo_if_dry_run=""
+fi
+
+if [ -z "$1" ]; then
+    echo "error: no target directory given" >&2
+    exit 1
+fi
+
+cd "$(dirname "$1")"
+pwd
+$echo_if_dry_run cargo clean -v
