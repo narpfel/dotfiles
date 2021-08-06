@@ -12,21 +12,11 @@ alias spacinst="sudo pacman -S"
 alias spacclean='sudo pacman -Rs $(pacman -Qdtq)'
 alias spacrm='sudo pacman -Rs'
 
-alias pacup="pacman -Syu"
-alias pacinst="pacman -S"
-alias pacclean='pacman -Rs $(pacman -Qdtq)'
-alias pacrm='pacman -Rs'
-
 compdef pacsearch="pacman"
 compdef spacup="pacman"
 compdef spacinst="pacman"
 compdef spacclean='pacman'
 compdef spacrm='pacman'
-
-compdef pacup="pacman"
-compdef pacinst="pacman"
-compdef pacclean='pacman'
-compdef pacrm='pacman'
 
 alias sc='scons'
 alias scu='scons upload'
