@@ -2,7 +2,7 @@
 
 # The MIT License (MIT)
 #
-# Copyright (c) 2009-2018 Robby Russell and contributors
+# Copyright (c) 2009-2021 Robby Russell and contributors
 # See the full list at https://github.com/robbyrussell/oh-my-zsh/contributors
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,6 +26,8 @@
 # Yay! High voltage and arrows!
 
 prompt_setup_pygmalion(){
+  setopt localoptions extendedglob
+
   ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}"
   ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
   ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%}Ξ%{$reset_color%}"
@@ -43,23 +45,22 @@ prompt_setup_pygmalion(){
   base_prompt='%{$fg_bold[red]%}'"$username"'%{$reset_color%}%{$fg_bold[cyan]%}@%{$reset_color%}%{$fg_bold[green]%}'"$hostname"'%{$reset_color%}%{$fg[red]%}:%{$reset_color%}%{$fg[blue]%}%0~%{$reset_color%}'
   post_prompt='%{$fg_bold[blue]%}»%{$reset_color%} '
 
-  base_prompt_nocolor=$(echo "$base_prompt" | perl -pe "s/%\{[^}]+\}//g")
-  post_prompt_nocolor=$(echo "$post_prompt" | perl -pe "s/%\{[^}]+\}//g")
+  base_prompt_nocolor=${base_prompt//\%\{[^\}]##\}}
+  post_prompt_nocolor=${post_prompt//\%\{[^\}]##\}}
 
-  precmd_functions+=(prompt_pygmalion_precmd)
+  autoload -U add-zsh-hook
+  add-zsh-hook precmd prompt_pygmalion_precmd
 }
 
 prompt_pygmalion_precmd(){
   local exit_state=$?
-  local gitinfo=$(git_prompt_info)
-  local gitinfo_nocolor=$(echo "$gitinfo" | perl -pe "s/%\{[^}]+\}//g")
-  local exp_nocolor="$(print -P \"$base_prompt_nocolor$gitinfo_nocolor$post_prompt_nocolor\")"
-  local prompt_length=${#exp_nocolor}
-  local venv_prompt="$(virtualenv_prompt_info)"
 
-  if [[ ! -z "$venv_prompt" ]]; then
-    venv_prompt="$venv_prompt "
-  fi
+  setopt localoptions nopromptsubst extendedglob
+
+  local gitinfo=$(git_prompt_info)
+  local gitinfo_nocolor=${gitinfo//\%\{[^\}]##\}}
+  local exp_nocolor="$(print -P \"${base_prompt_nocolor}${gitinfo_nocolor}${post_prompt_nocolor}\")"
+  local prompt_length=${#exp_nocolor}
 
   local success
   if [[ $exit_state -eq 0 ]]; then
@@ -68,8 +69,7 @@ prompt_pygmalion_precmd(){
     success="%{$fg_bold[red]%}✘%{$reset_color%}"
   fi
 
-  local nl=""
-
+  local nl=" "
   if [[ $prompt_length -gt 40 ]]; then
     nl=$'\n%{\r%}';
   fi
@@ -79,8 +79,10 @@ prompt_pygmalion_precmd(){
     pipe="%{$fg[red]%}|%{$reset_color%}"
   fi
 
-  PROMPT="$base_prompt$pipe$gitinfo $nl$post_prompt"
-  RPROMPT="$venv_prompt$success"
+  # FIXME: This evaluates `git_prompt_info` twice, adding ~40ms to each
+  # invocation inside of git repos
+  PROMPT="${base_prompt}${pipe}\$(git_prompt_info)${nl}${post_prompt}"
+  RPROMPT="\$(virtualenv_prompt_info) ${success}"
 }
 
 prompt_setup_pygmalion
