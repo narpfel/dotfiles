@@ -1,0 +1,74 @@
+[colors.bright]
+black = "0x666666"
+blue = "0x7aa6da"
+cyan = "0x54ced6"
+green = "0x9ec400"
+magenta = "0xb77ee0"
+red = "0xff3334"
+white = "0x2a2a2a"
+yellow = "0xe7b547"
+
+[colors.normal]
+black = "0x000000"
+blue = "0x7aa6da"
+cyan = "0x70c0ba"
+green = "0xb9ca4a"
+magenta = "0xc397d8"
+red = "0xd54e53"
+white = "0x424242"
+yellow = "0xe6a500"
+
+[colors.primary]
+background = "0xeeeeee"
+foreground = "0x000000"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 10.67
+
+[font.bold]
+family = "Fura Code Nerd Font Mono"
+
+[font.italic]
+family = "Fura Code Nerd Font Mono"
+
+[font.normal]
+family = "Fura Code Nerd Font Mono"
+
+[[keyboard.bindings]]
+chars = "\u001B[24;5~"
+key = "Return"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001B[23;5~"
+key = 39
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = ""
+key = "Up"
+mods = "Control|Alt"
+
+[[keyboard.bindings]]
+chars = ""
+key = "Down"
+mods = "Control|Alt"
+
+[[mouse.bindings]]
+action = "Paste"
+mouse = "Middle"
+
+[shell]
+args = ["-2", "new-session"]
+program = "/usr/bin/tmux"
+
+[window.dimensions]
+columns = 80
+lines = 24
+
+[window.padding]
+x = 2
+y = 2
