@@ -14,6 +14,11 @@ repos:
       - id: file-contents-sorter
         files: ^(\.gitignore|\.gitignore_global)$
         args: ["--unique"]
+      - id: file-contents-sorter
+        files: ^\.config/nvim/after/plugin/(typos|keyword_replace)\.vim$
+        args:
+          - --ignore-case
+          - --unique
       - id: fix-byte-order-marker
       - id: mixed-line-ending
       - id: trailing-whitespace
