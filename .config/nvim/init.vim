@@ -232,15 +232,3 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
-
-abbr cosnt const
-abbr improt import
-abbr inlcude include
-abbr intput input
-abbr mian main
-abbr String_view string_view
-abbr string_View string_view
-abbr tempalte template
-abbr typeanme typename
-abbr vecotr vector
-abbr retrun return
