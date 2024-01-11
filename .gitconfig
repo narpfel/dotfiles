@@ -14,7 +14,15 @@
 	rebase = true
 [core]
 	excludesfile = ~/.gitignore_global
+	pager = delta
 [commit]
 	verbose = true
 [init]
 	defaultBranch = main
+
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	light = true
+	line-numbers = true
+	navigate = true
