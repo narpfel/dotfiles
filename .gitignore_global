@@ -1,7 +1,11 @@
+.cache
 Session.vim
 cachegrind.out.*
 callgrind.out.*
 compile_commands.json
 compile_flags.txt
+flamegraph*.svg
 perf.data
-perf.data.out
+perf.data.old
+profile.coz
+target-pgo
