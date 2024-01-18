@@ -5,6 +5,7 @@ callgrind.out.*
 compile_commands.json
 compile_flags.txt
 flamegraph*.svg
+jitlog*
 perf.data
 perf.data.old
 profile.coz
