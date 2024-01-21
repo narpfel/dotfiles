@@ -65,7 +65,6 @@ plugins=(
     python
     systemd
     autojump
-    cargo
     rust
     tmux
     sublime
