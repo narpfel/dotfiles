@@ -38,11 +38,13 @@ family = "Fura Code Nerd Font Mono"
 family = "Fura Code Nerd Font Mono"
 
 [[keyboard.bindings]]
+# bind C-Return to F36
 chars = "\u001B[24;5~"
 key = "Return"
 mods = "Control"
 
 [[keyboard.bindings]]
+# bind C-ö to F35
 chars = "\u001B[23;5~"
 key = 39
 mods = "Control"
