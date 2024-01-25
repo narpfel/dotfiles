@@ -128,10 +128,27 @@ end_screencast() {
 
 _build_virtualenv() {
     local virtualenv_command="$1"; shift
-    local venv="${1:-venv}"; shift
+    local args=()
+    while true; do
+        case "$1" in
+            -*)
+                args+=("$1")
+                shift
+                ;;
+            # TODO: Implement `-*|--*=*)`
+            *)
+                break
+                ;;
+        esac
+    done
+    local venv="${1:-venv}"
+    if [ $# -ne 0 ]; then
+        shift
+    fi
+
     if [[ ! -e "$venv" ]]; then
         echo "Create new virtualenv in \`$venv\`."
-        ${(Q)${(z)virtualenv_command}} "$venv" "$@" || return 1
+        ${(Q)${(z)virtualenv_command}} "$venv" "${args[@]}" "$@" || return 1
     elif [[ ! -d "$venv" || ! -f "$venv"/bin/activate ]]; then
         echo "Could not activate venv in \`$venv\`."
         return 1
