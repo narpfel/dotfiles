@@ -51,6 +51,8 @@ Plug 'tpope/vim-obsession'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+Plug 'lfv89/vim-interestingwords'
+
 " Always load last.
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -127,6 +129,7 @@ vmap <C-e> <Leader>c<Space>gv
 imap <expr><C-e> pumvisible() ? "\<C-e>" : "\<Esc><Leader>c<Space>a"
 
 let g:python_highlight_all = 1
+let g:interestingWordsGUIColors = ['#aeee00', '#ff0000', '#9999ff', '#b88823', '#ffa724', '#bb7cab']
 
 let g:ctrlp_user_command = 'fd --hidden --exclude .git/ --type f --full-path %s --fixed-strings'
 
