@@ -94,6 +94,9 @@ set inccommand=nosplit
 
 set cursorline
 
+set ignorecase
+set smartcase
+
 let mapleader = "\<Space>"
 
 " Use powerline fonts in airline
