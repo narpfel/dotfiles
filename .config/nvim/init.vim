@@ -5,6 +5,10 @@ let g:python3_host_prog='/usr/bin/python'
 
 let g:polyglot_disabled = ['python']
 
+" apparently breaks `vim.filetype.add`
+let g:polyglot_disabled = ['ftdetect']
+let g:filetype_pl = "prolog"
+
 call plug#begin('~/.config/nvim/bundle')
 
 Plug 'junegunn/vim-plug'
