@@ -22,13 +22,12 @@ hi MatchParen guifg=#008080 guibg=#ff6f00 gui=underline
 hi StatusLine guifg=#000000 guibg=#a9a9a9 gui=bold
 hi StatusLineNC guifg=#000000 guibg=#a9a9a9
 hi Pmenu guibg=#dddddd
-hi PmenuSel guibg=#adaeb8
+hi PmenuSel guifg=#000000 guibg=#bbbbbb
 hi IncSearch guifg=#eeeeee guibg=#ba2121
 hi Search gui=underline
 hi Constant guifg=#008000
 hi Folded guifg=#408080 guibg=#eeeeee
 hi SignColumn guibg=#d7d7d7
-hi CocWarningFloat guifg=#d48100
 
 hi Normal guifg=#000000 guibg=#eeeeee
 hi Boolean guifg=#008000 guibg=#eeeeee gui=bold
@@ -64,4 +63,14 @@ hi Underlined gui=underline
 
 hi Delimiter guifg=NONE
 
-hi haskellIdentifier guifg=#008000 gui=bold
+hi boldIdentifier guifg=#008000 gui=bold
+
+hi link haskellIdentifier boldIdentifier
+hi link tomlKey boldIdentifier
+hi link tomlKeySq boldIdentifier
+hi link tomlKeyDq boldIdentifier
+
+hi link @keyword.operator Operator
+hi link @attribute Operator
+
+hi link @type.qualifier StorageClass
