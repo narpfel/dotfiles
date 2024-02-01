@@ -109,7 +109,7 @@ let g:airline_powerline_fonts = 1
 augroup BufferEnter
     autocmd!
 
-    autocmd BufEnter * EnableStripWhitespaceOnSave
+    autocmd FileType,BufEnter * EnableStripWhitespaceOnSave
     autocmd BufEnter term://* startinsert
 augroup END
 
