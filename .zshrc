@@ -157,3 +157,10 @@ vv() {
 vt() {
     _build_virtualenv "tox --devenv" "$@"
 }
+
+on_modify() {
+    local directory="$1"; shift
+    while inotifywait -e modify "$directory"; do
+        eval "$@"
+    done
+}
