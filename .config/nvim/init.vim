@@ -232,6 +232,7 @@ tnoremap <silent> <C-l> <C-\><C-n>:TmuxNavigateRight<Cr>
 tnoremap <C-Esc> <C-\><C-n>
 
 lua <<EOF
+require("narpfel.filetype")
 require("narpfel.ts_config")
 -- system-specific configuration
 -- `narpfel.local` is gitignored and may not be present
