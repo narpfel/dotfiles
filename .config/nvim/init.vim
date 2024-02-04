@@ -27,12 +27,20 @@ Plug 'scrooloose/nerdcommenter'
 " For the `gc` text object. Could maybe replace NERDCommenter‽
 Plug 'tpope/vim-commentary'
 
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile', 'for': 'json'}
-Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
-Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
-Plug 'voldikss/coc-cmake', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neovim/nvim-lspconfig'
+
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-ui-select.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
@@ -142,16 +150,6 @@ let g:ctrlp_user_command = 'fd --hidden
     \ --exclude .git/ --exclude ''*.pyc'' --exclude ''venv*''
     \ --type f --full-path %s --fixed-strings'
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-nmap <silent> <Leader>la <Plug>(coc-codeaction-line)
-nnoremap <silent><nowait> <Leader>lp :<C-u>CocList commands<cr>
-
-nmap <silent> <Leader>lr <Plug>(coc-rename)
-
 command! W w
 command! Qa qa
 command! Q q
@@ -232,8 +230,11 @@ tnoremap <silent> <C-l> <C-\><C-n>:TmuxNavigateRight<Cr>
 tnoremap <C-Esc> <C-\><C-n>
 
 lua <<EOF
+require("narpfel.lsp")
+require("narpfel.cmp")
 require("narpfel.filetype")
 require("narpfel.ts_config")
+require("narpfel.telescope")
 -- system-specific configuration
 -- `narpfel.local` is gitignored and may not be present
 pcall(require, "narpfel.local")
