@@ -1,4 +1,5 @@
 .config/nvim/bundle
+.config/nvim/lua/narpfel/local.lua
 .dotfiles/
 .gitconfig_user
 .zsh_aliases_private

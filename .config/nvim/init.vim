@@ -233,4 +233,7 @@ tnoremap <C-Esc> <C-\><C-n>
 
 lua <<EOF
 require("narpfel.ts_config")
+-- system-specific configuration
+-- `narpfel.local` is gitignored and may not be present
+pcall(require, "narpfel.local")
 EOF
