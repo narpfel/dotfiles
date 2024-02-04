@@ -218,6 +218,9 @@ augroup AutoFoldHaskell
         \ set foldexpr=getline(v:lnum)=~'^\\s*{\\?\\s*--'
 augroup END
 
+nnoremap <A-l> :BLines<Cr>
+nnoremap <C-A-l> :Lines<Cr>
+
 " `<C-ö>` is mapped to `<F35>` in Alacritty.
 nnoremap <silent> <F35> :TmuxNavigatePrevious<Cr>
 tnoremap <silent> <F35> <C-\><C-n>:TmuxNavigatePrevious<Cr>
@@ -228,6 +231,14 @@ tnoremap <silent> <C-j> <C-\><C-n>:TmuxNavigateDown<Cr>
 tnoremap <silent> <C-k> <C-\><C-n>:TmuxNavigateUp<Cr>
 tnoremap <silent> <C-l> <C-\><C-n>:TmuxNavigateRight<Cr>
 tnoremap <C-Esc> <C-\><C-n>
+
+nnoremap <silent> <C-b> :Buffers<Cr>
+
+nnoremap <silent> <Leader>q :ClangdSwitchSourceHeader<Cr>
+
+nnoremap <silent> <Leader>i :lua vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())<Cr>
+
+noremap E :TSHighlightCapturesUnderCursor<Cr>
 
 lua <<EOF
 require("narpfel.lsp")
