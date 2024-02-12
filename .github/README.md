@@ -21,8 +21,6 @@ config config --local status.showUntrackedFiles no
 * `neovim`
 * [`grml-zsh-config`](https://archlinux.org/packages/extra/any/grml-zsh-config/)
 * [`autojump`](https://aur.archlinux.org/packages/autojump/)
-* `nodejs`
-* `yarn`
 
 License
 -------
