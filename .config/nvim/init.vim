@@ -98,7 +98,7 @@ set hidden
 " Open preview panes on the bottom
 set splitbelow
 
-" Always show diagnostics sign column ( to prevent flickering/moving the text)
+" Always show diagnostics sign column (to prevent flickering/moving the text)
 set signcolumn=yes
 
 set lazyredraw
