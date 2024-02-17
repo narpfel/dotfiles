@@ -35,6 +35,9 @@ alias view='nvim -R'
 
 alias e="exa -la --git --group-directories-first"
 alias diff="diff -u --color=auto"
+# TODO: Find a way to extend the existing `grep` alias with `--line-buffered`
+# This overwrites the existing `grep` alias.
+# alias grep="grep --line-buffered"
 
 alias dotfiles="GIT_DIR=\"$HOME/.dotfiles\" GIT_WORK_TREE=\"$HOME\""
 
