@@ -19,6 +19,8 @@
     verbose = true
 [init]
     defaultBranch = main
+[diff]
+    algorithm = histogram
 
 [interactive]
     diffFilter = delta --color-only
