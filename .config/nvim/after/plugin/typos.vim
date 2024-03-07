@@ -19,6 +19,12 @@ abbr String_view string_view
 abbr string_View string_view
 abbr tempalte template
 abbr typeanme typename
+abbr Unqie Unique
+abbr unqie unique
+abbr unqie_ptr unique_ptr
+abbr Unque Unique
+abbr unque unique
+abbr unque_ptr unique_ptr
 abbr unsigend unsigned
 abbr unsinged unsigned
 abbr vecotr vector
