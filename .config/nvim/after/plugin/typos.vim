@@ -12,6 +12,7 @@ abbr flase false
 abbr improt import
 abbr inlcude include
 abbr intput input
+abbr maybe_unsued maybe_unused
 abbr mian main
 abbr retrun return
 abbr strcut struct
@@ -27,4 +28,5 @@ abbr unque unique
 abbr unque_ptr unique_ptr
 abbr unsigend unsigned
 abbr unsinged unsigned
+abbr unsued unused
 abbr vecotr vector
