@@ -73,6 +73,9 @@ plugins=(
     # zsh-syntax-highlighting
 )
 
+# unbreak git prompt, doesn’t work with async
+zstyle ':omz:alpha:lib:git' async-prompt no
+
 source $ZSH/oh-my-zsh.sh
 
 
