@@ -81,3 +81,7 @@ find-cargo-dirs-remove() {
         | xargs -0 -L 1 --no-run-if-empty \
             find-cargo-dirs-cd-clean $perform_destructive_operation
 }
+
+sum() {
+    echo $(($(sed -E 's/\s+/+/g' | paste -sd+)))
+}
