@@ -45,8 +45,6 @@ for _, language_server in pairs({"clangd", "hls", "rust_analyzer"}) do
                         -- breaking cargo’s caching when `RUSTFLAGS` change
                         CARGO_TARGET_DIR = "target/r-a",
                     },
-                },
-                check = {
                     features = "all",
                 },
             },
