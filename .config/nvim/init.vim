@@ -236,7 +236,7 @@ nnoremap <silent> <C-b> :Buffers<Cr>
 
 nnoremap <silent> <Leader>q :ClangdSwitchSourceHeader<Cr>
 
-nnoremap <silent> <Leader>i :lua vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())<Cr>
+nnoremap <silent> <Leader>i :lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(), { bufnr = 0 })<Cr>
 
 noremap E :TSHighlightCapturesUnderCursor<Cr>
 
