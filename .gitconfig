@@ -21,6 +21,8 @@
     defaultBranch = main
 [diff]
     algorithm = histogram
+[branch]
+    sort = committerdate
 
 [interactive]
     diffFilter = delta --color-only
