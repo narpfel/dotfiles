@@ -85,3 +85,9 @@ find-cargo-dirs-remove() {
 sum() {
     echo $(($(sed -E 's/\s+/+/g' | paste -sd+)))
 }
+
+mutability() {
+    local let_bindings=$(git ls-files -z | xargs -0 rg -t rust "let " --count | cut -d: -f2 | sum)
+    local mut_bindings=$(git ls-files -z | xargs -0 rg -t rust "let mut " --count | cut -d: -f2 | sum)
+    echo $((${mut_bindings}. / $let_bindings))
+}
