@@ -30,7 +30,7 @@ hi Folded guifg=#408080 guibg=#eeeeee
 hi SignColumn guibg=#d7d7d7
 
 hi Normal guifg=#000000 guibg=#eeeeee
-hi Boolean guifg=#008000 guibg=#eeeeee gui=bold
+hi Boolean guifg=#008000 gui=bold
 
 hi Comment guifg=#408080 gui=italic
 hi Conditional guifg=#008000 gui=bold
