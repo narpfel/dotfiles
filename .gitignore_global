@@ -1,5 +1,6 @@
 *.pyc
 .cache
+.gdb_history
 Session.vim
 cachegrind.out.*
 callgrind.out.*
