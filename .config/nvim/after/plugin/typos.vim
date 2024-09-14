@@ -15,6 +15,10 @@ abbr intput input
 abbr maybe_unsued maybe_unused
 abbr mian main
 abbr retrun return
+abbr Sigend Signed
+abbr sigend signed
+abbr Singed Signed
+abbr singed signed
 abbr strcut struct
 abbr String_view string_view
 abbr string_View string_view
@@ -26,7 +30,9 @@ abbr unqie_ptr unique_ptr
 abbr Unque Unique
 abbr unque unique
 abbr unque_ptr unique_ptr
+abbr Unsigend Unsigned
 abbr unsigend unsigned
+abbr Unsinged Unsigned
 abbr unsinged unsigned
 abbr unsued unused
 abbr vecotr vector
