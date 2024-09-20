@@ -70,3 +70,7 @@ program = "/usr/bin/tmux"
 [window.dimensions]
 columns = 80
 lines = 24
+
+[window.padding]
+x = 1
+y = 1
