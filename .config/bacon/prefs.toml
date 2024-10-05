@@ -1,1 +1,4 @@
 on_change_strategy = "kill_then_restart"
+
+[keybindings]
+shift-b = "toggle-backtrace(full)"
