@@ -1,4 +1,4 @@
-on_change_strategy = "kill_then_restart"
+grace_period = "25ms"
 
 [keybindings]
 shift-b = "toggle-backtrace(full)"
