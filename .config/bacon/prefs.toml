@@ -1,4 +1,10 @@
 grace_period = "25ms"
 
+[jobs.fmt]
+command = ["cargo", "fmt"]
+need_stdout = false
+on_success = "back"
+
 [keybindings]
+f = "job:fmt"
 shift-b = "toggle-backtrace(full)"
