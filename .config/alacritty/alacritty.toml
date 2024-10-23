@@ -63,7 +63,7 @@ mods = "Control|Alt"
 action = "Paste"
 mouse = "Middle"
 
-[shell]
+[terminal.shell]
 args = ["-2", "new-session"]
 program = "/usr/bin/tmux"
 
