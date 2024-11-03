@@ -74,3 +74,4 @@ hi link @keyword.operator Operator
 hi link @attribute Operator
 
 hi link @type.qualifier StorageClass
+hi @field.identifier guifg=#008000 gui=italic

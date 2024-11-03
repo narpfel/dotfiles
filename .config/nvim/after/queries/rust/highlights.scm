@@ -1,3 +1,5 @@
 ; extends
 
 ["=>"] @keyword.operator
+
+(field_initializer field: (field_identifier) @field.identifier)
