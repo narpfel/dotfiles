@@ -1,4 +1,4 @@
-grace_period = "25ms"
+grace_period = "50ms"
 
 [jobs.fmt]
 command = ["cargo", "fmt"]
