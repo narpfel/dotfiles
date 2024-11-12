@@ -43,6 +43,7 @@ alias dotfiles="GIT_DIR=\"$HOME/.dotfiles\" GIT_WORK_TREE=\"$HOME\""
 
 # I’m starting to hate ghostscript.
 alias gs=gd
+alias gsd=gds
 
 alias otp="xclip -o -sel c | oathtool --totp --base32 - | tr -d '\n' | xclip -sel c"
 
