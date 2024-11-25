@@ -12,6 +12,7 @@ abbr flase false
 abbr improt import
 abbr inlcude include
 abbr intput input
+abbr knwon known
 abbr maybe_unsued maybe_unused
 abbr mian main
 abbr retrun return
@@ -24,6 +25,7 @@ abbr String_view string_view
 abbr string_View string_view
 abbr tempalte template
 abbr typeanme typename
+abbr unknwon unknown
 abbr Unqie Unique
 abbr unqie unique
 abbr unqie_ptr unique_ptr
