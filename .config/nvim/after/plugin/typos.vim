@@ -16,6 +16,7 @@ abbr knwon known
 abbr maybe_unsued maybe_unused
 abbr mian main
 abbr retrun return
+abbr reutrn return
 abbr Sigend Signed
 abbr sigend signed
 abbr Singed Signed
