@@ -1,3 +1,5 @@
+hash -d wtmp=~/tmp
+
 alias rt='trash'
 alias wsens='watch -n 0,1 sensors'
 
