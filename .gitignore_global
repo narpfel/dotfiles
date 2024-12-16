@@ -11,4 +11,6 @@ jitlog*
 perf.data
 perf.data.old
 profile.coz
+profile.pstat
+profile.svg
 target-pgo
