@@ -15,7 +15,6 @@ abbr intput input
 abbr knwon known
 abbr maybe_unsued maybe_unused
 abbr mian main
-abbr qa 'a
 abbr retrun return
 abbr reutrn return
 abbr Sigend Signed
@@ -41,3 +40,4 @@ abbr Unsinged Unsigned
 abbr unsinged unsigned
 abbr unsued unused
 abbr vecotr vector
+iabbr qa 'a
