@@ -6,6 +6,7 @@ abbr defualt default
 abbr Degub Debug
 abbr degub debug
 abbr dgb dbg
+abbr dgc dcg
 abbr firend friend
 abbr Flase False
 abbr flase false
