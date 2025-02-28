@@ -163,7 +163,8 @@ vt() {
 
 on_modify() {
     local directory="$1"; shift
-    while inotifywait -e modify "$directory"; do
+    while inotifywait --quiet --event modify "$directory"; do
+        echo -e "\x1b[1m\x1b[33m$(date +'%Y-%m-%d %H:%M:%S.%N')\x1b[m"
         eval "$@"
     done
 }
