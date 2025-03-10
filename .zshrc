@@ -165,6 +165,6 @@ on_modify() {
     local directory="$1"; shift
     while inotifywait --quiet --event modify "$directory"; do
         echo -e "\x1b[1m\x1b[33m$(date +'%Y-%m-%d %H:%M:%S.%N')\x1b[m"
-        eval "$@"
+        eval "$@" || echo -e "\x1b[3m$1 exited with code \x1b[1m\x1b[31m$?\x1b[m"
     done
 }
