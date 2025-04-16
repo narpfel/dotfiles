@@ -1,5 +1,0 @@
-{
-    "languageServerHaskell": {
-        "formattingProvider": "floskell"
-    }
-}
