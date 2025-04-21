@@ -67,7 +67,6 @@ plugins=(
     autojump
     rust
     tmux
-    sublime
     virtualenv
     docker
     # zsh-syntax-highlighting
