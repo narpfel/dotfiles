@@ -2,6 +2,7 @@ abbr Boc Box
 abbr cosnt const
 abbr cosntexpr constexpr
 abbr costn const
+abbr Defualt Default
 abbr defualt default
 abbr Degub Debug
 abbr degub debug
