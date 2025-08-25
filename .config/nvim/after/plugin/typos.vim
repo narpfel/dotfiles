@@ -24,6 +24,7 @@ abbr Sigend Signed
 abbr sigend signed
 abbr Singed Signed
 abbr singed signed
+abbr stD std
 abbr strcut struct
 abbr String_view string_view
 abbr string_View string_view
