@@ -29,6 +29,7 @@ abbr String_view string_view
 abbr string_View string_view
 abbr tempalte template
 abbr TRue True
+abbr tulpe tuple
 abbr typeanme typename
 abbr unknwon unknown
 abbr Unqie Unique
