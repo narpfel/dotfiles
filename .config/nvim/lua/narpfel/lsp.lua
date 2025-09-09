@@ -47,6 +47,7 @@ for _, language_server in pairs({"clangd", "hls", "rust_analyzer"}) do
                     },
                     features = "all",
                 },
+                cachePriming = { enable = false },
             },
         },
     })
