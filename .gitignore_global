@@ -1,4 +1,5 @@
 *.pyc
+.aoc-expected
 .cache
 .gdb_history
 Session.vim
