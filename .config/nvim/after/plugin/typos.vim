@@ -18,6 +18,7 @@ abbr knwon known
 abbr maybe_unsued maybe_unused
 abbr mian main
 abbr PathBug PathBuf
+abbr protexted protected
 abbr retrun return
 abbr reutrn return
 abbr Sigend Signed
