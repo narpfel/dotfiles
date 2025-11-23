@@ -91,7 +91,7 @@ sum() {
 }
 
 mutability() {
-    local let_bindings=$(git ls-files -z | xargs -0 rg -t rust "let " --count | cut -d: -f2 | sum)
-    local mut_bindings=$(git ls-files -z | xargs -0 rg -t rust "let mut " --count | cut -d: -f2 | sum)
+    local let_bindings=$(git ls-files -z | xargs -0 rg -t rust "\blet " --count | cut -d: -f2 | sum)
+    local mut_bindings=$(git ls-files -z | xargs -0 rg -t rust "\blet mut " --count | cut -d: -f2 | sum)
     echo $((${mut_bindings}. / $let_bindings))
 }
