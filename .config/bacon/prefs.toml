@@ -7,4 +7,5 @@ on_success = "back"
 
 [keybindings]
 f = "job:fmt"
+p = "toggle-pause"
 shift-b = "toggle-backtrace(full)"
