@@ -48,4 +48,5 @@ abbr unsinged unsigned
 abbr unsued unused
 abbr vecotr vector
 iabbr qa 'a
+iabbr qb 'b
 iabbr qq '_
