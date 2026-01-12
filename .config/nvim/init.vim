@@ -117,10 +117,11 @@ let g:airline_powerline_fonts = 1
 augroup BufferEnter
     autocmd!
 
-    autocmd FileType,BufEnter * EnableStripWhitespaceOnSave
     autocmd BufEnter term://* startinsert
 augroup END
 
+let g:strip_whitespace_on_save = 1
+let g:better_whitespace_filetypes_blacklist = ['diff']
 let g:strip_whitespace_confirm = 0
 
 " Add spaces after comment delimiters by default
