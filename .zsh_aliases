@@ -95,3 +95,11 @@ mutability() {
     local mut_bindings=$(git ls-files -z | xargs -0 rg -t rust "\blet mut " --count | cut -d: -f2 | sum)
     echo $((${mut_bindings}. / $let_bindings))
 }
+
+alias rf="git grep --files-with-matches"
+
+nrf() {
+    rf --null "$@" | xargs --null nvim
+}
+
+alias rfn=nrf
