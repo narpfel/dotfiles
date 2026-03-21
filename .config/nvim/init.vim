@@ -123,6 +123,7 @@ augroup END
 let g:strip_whitespace_on_save = 1
 let g:better_whitespace_filetypes_blacklist = ['diff']
 let g:strip_whitespace_confirm = 0
+let g:strip_max_file_size = 0
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
