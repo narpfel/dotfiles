@@ -17,6 +17,7 @@ abbr intput input
 abbr knwon known
 abbr maybe_unsued maybe_unused
 abbr mian main
+abbr NOne None
 abbr PathBug PathBuf
 abbr protexted protected
 abbr retrun return
