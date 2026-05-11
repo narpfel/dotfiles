@@ -52,3 +52,4 @@ abbr vecotr vector
 iabbr qa 'a
 iabbr qb 'b
 iabbr qq '_
+iabbr öö :_
