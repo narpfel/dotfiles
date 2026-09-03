@@ -25,6 +25,7 @@ abbr NOne None
 abbr PathBug PathBuf
 abbr protexted protected
 abbr retrun return
+abbr retuirn return
 abbr reutrn return
 abbr Sigend Signed
 abbr sigend signed
