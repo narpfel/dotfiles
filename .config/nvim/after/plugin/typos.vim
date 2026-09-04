@@ -1,5 +1,6 @@
 abbr as_Ref as_ref
 abbr Boc Box
+abbr coid void
 abbr cosnt const
 abbr cosntexpr constexpr
 abbr costn const
