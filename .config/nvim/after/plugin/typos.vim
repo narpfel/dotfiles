@@ -38,6 +38,7 @@ abbr strcut struct
 abbr String_view string_view
 abbr string_View string_view
 abbr tempalte template
+abbr tpye type
 abbr TRue True
 abbr tulpe tuple
 abbr ture true
